@@ -1,0 +1,25 @@
+class IST:
+    def __init__(self,nome,altura,idade):
+        self._nome=nome
+        self.__altura=altura #2 tracinhos torna privado (clareza de código;códigos grandes e compridos)
+        self.idade=idade
+    def __str__(self):
+        return f"Esta pessoa do IST chama-se {self._nome}"  #f formata a string
+    def get_altura(self):
+        return self.__altura
+    
+class Aluno(IST): #herda da class ist
+    def __init__(self,nome,altura,idade,curso):
+        super().__init__(nome,altura,idade) #quero que comece da mesma maneira que a outra classe e só depois adicione as coisas desta classe
+        self.__curso=curso
+    def get_curso(self): #__(antes da função também é um método privado)
+        return self.__curso
+    def get_altura(self) -> float:
+        return self._altura
+
+Vasco=Aluno("Vasco",180,19,"LEFT") #pega sempre no mais específico
+print(Vasco)
+        
+#privados não conseguem ser acedidos mesmo que a classe seja heredeteriedade, protegido o heredetário consegue
+
+#ver big O notation!!!!
