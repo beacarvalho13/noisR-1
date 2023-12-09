@@ -68,3 +68,5 @@ while True:
     
     pygame.display.flip()
     clock.tick(FPS)
+
+oiiiiii consegues ver?
